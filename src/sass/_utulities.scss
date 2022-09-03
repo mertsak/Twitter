@@ -1,0 +1,12 @@
+@import "./veriables";
+
+.element-class {
+  background-color: $--main-bg-color;
+  color: $--main-text-color;
+}
+
+.app{
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
