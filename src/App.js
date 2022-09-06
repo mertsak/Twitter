@@ -1,6 +1,6 @@
 import Siderbar from "./components/Siderbar";
-
 import Feed from "./components/Feed";
+import Widgets from "./components/Widgets";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <Feed></Feed>
 
       {/* Widgets */}
+      <Widgets></Widgets>
     </div>
   );
 }

@@ -5,10 +5,14 @@ export const postsSlice = createSlice({
   initialState: {
     posts: [],
   },
-  reducers: {},
+  reducers: {
+    fetchPost: (state, action) => {
+      state.posts = action.payload;
+    },
+  },
 });
 
 // Action creators are generated for each case reducer function
-// export const {  } = counterSlice.actions
+export const { fetchPost } = postsSlice.actions;
 
 export default postsSlice.reducer;

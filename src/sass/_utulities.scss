@@ -5,8 +5,9 @@
   color: $--main-text-color;
 }
 
-.app{
-    display: flex;
-    max-width: 1300px;
-    margin: 0 auto;
+.app {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
 }

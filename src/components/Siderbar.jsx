@@ -11,6 +11,8 @@ import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
 
+import Avatar from "@mui/material/Avatar";
+
 import Button from "@mui/material/Button";
 
 import SidebarOption from "./SidebarOption";
@@ -46,6 +48,17 @@ const Siderbar = () => {
       <Button className="sidebar__btn" variant="outlined">
         Tweetle
       </Button>
+
+      <div className="sidebar__user__con">
+        <div className="sidebar__user">
+          <Avatar></Avatar>
+          <div>
+            <p className="user__name">Mert Sakınç</p>
+            <p className="user__username">@mrtsknc</p>
+          </div>
+          <MoreHorizOutlinedIcon></MoreHorizOutlinedIcon>
+        </div>
+      </div>
     </div>
   );
 };
