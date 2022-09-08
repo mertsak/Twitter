@@ -76,17 +76,22 @@ img {
   .sidebar .active {
     color: #50b7f5; }
   .sidebar__user {
-    padding: 0 .8rem;
+    padding: 0.5rem 0.8rem;
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    border-radius: 2rem;
     align-items: center;
-    gap: 1.5rem; }
+    gap: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear; }
+    .sidebar__user:hover {
+      background-color: #e7e7e8; }
     .sidebar__user .user__name {
       font-weight: bold; }
     .sidebar__user .user__username {
       font-weight: 300;
-      font-size: .8rem; }
+      font-size: 0.8rem; }
   .sidebar .sidebar__user__con {
     position: fixed;
     bottom: 20px; }
@@ -206,6 +211,8 @@ img {
       letter-spacing: 1px;
       padding: 0.2rem 0.6rem;
       opacity: 0.6; }
+      .tweetbox__tweet .tweet__btn.active {
+        opacity: 1; }
       .tweetbox__tweet .tweet__btn:hover {
         background-color: #1a8cd8; }
 
@@ -251,15 +258,48 @@ img {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem; }
+    .post__footer span {
+      display: flex;
+      align-items: center;
+      color: #4d4d4d;
+      transition: all 0.3s linear;
+      cursor: pointer; }
     .post__footer svg {
-      color: #a1a1a1;
       font-size: 32px;
       padding: 0.3rem;
       margin: 0 0.1rem;
       transition: all 0.3s linear;
-      border-radius: 50%; }
-      .post__footer svg:hover {
-        background-color: #ceeaff; }
+      border-radius: 40%; }
+    .post__footer .comment:hover .comment__text,
+    .post__footer .dowland:hover .dowland__text {
+      color: #8bcaf4; }
+    .post__footer .comment:hover .comment__icon {
+      background-color: #e1eef6;
+      color: #8bcaf4; }
+    .post__footer .dowland:hover .dowland__icon {
+      background-color: #e1eef6;
+      color: #8bcaf4; }
+    .post__footer .comment svg:hover,
+    .post__footer .dowland svg:hover {
+      background-color: #e1eef6;
+      color: #36a5f1; }
+    .post__footer .retweet:hover .retweet__text {
+      color: #00ba7c; }
+    .post__footer .retweet:hover .retweet__icon {
+      background-color: #def1eb;
+      color: #00ba7c; }
+    .post__footer .retweet svg:hover {
+      background-color: #def1eb;
+      color: #00ba7c; }
+    .post__footer .like:hover .like__text {
+      color: #f91880; }
+    .post__footer .like:hover .like__icon {
+      background-color: #f7e0eb;
+      color: #f91880; }
+    .post__footer .like svg:hover {
+      background-color: #f7e0eb;
+      color: #f91880; }
   .post__close {
     margin-right: 1rem;
-    margin-top: 1.2rem; }
+    margin-top: 1.2rem;
+    cursor: pointer; }

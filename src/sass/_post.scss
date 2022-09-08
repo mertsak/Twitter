@@ -56,22 +56,71 @@
     justify-content: space-between;
     margin-top: 1rem;
 
+    span {
+      display: flex;
+      align-items: center;
+      color: rgb(77, 77, 77);
+      transition: all 0.3s linear;
+      cursor: pointer;
+    }
+
     svg {
-      color: rgb(161, 161, 161);
       font-size: 32px;
       padding: 0.3rem;
       margin: 0 0.1rem;
       transition: all 0.3s linear;
-      border-radius: 50%;
+      border-radius: 40%;
+    }
 
-      &:hover {
-        background-color: #ceeaff;
-      }
+    .comment:hover .comment__text,
+    .dowland:hover .dowland__text {
+      color: #8bcaf4;
+    }
+
+    .comment:hover .comment__icon {
+      background-color: #e1eef6;
+      color: #8bcaf4;
+    }
+
+    .dowland:hover .dowland__icon {
+      background-color: #e1eef6;
+      color: #8bcaf4;
+    }
+
+    .comment svg:hover,
+    .dowland svg:hover {
+      background-color: #e1eef6;
+      color: #36a5f1;
+    }
+
+    .retweet:hover .retweet__text {
+      color: #00ba7c;
+    }
+    .retweet:hover .retweet__icon {
+      background-color: #def1eb;
+      color: #00ba7c;
+    }
+    .retweet svg:hover {
+      background-color: #def1eb;
+      color: #00ba7c;
+    }
+
+    .like:hover .like__text {
+      color: #f91880;
+    }
+    .like:hover .like__icon {
+      background-color: #f7e0eb;
+      color: #f91880;
+    }
+    .like svg:hover {
+      background-color: #f7e0eb;
+      color: #f91880;
     }
   }
 
   &__close {
     margin-right: 1rem;
     margin-top: 1.2rem;
+    cursor: pointer;
   }
 }

@@ -32,14 +32,26 @@ const Post = ({ displayname, username, verified, text, image, avatar, id }) => {
             <p>{text}</p>
           </div>
 
-          <img src={require(`../assets/${image}`)} alt="" />
+          {image && <img src={require(`../assets/${image}`)} alt="" />}
         </div>
 
         <div className="post__footer">
-          <ChatBubbleOutlineOutlinedIcon></ChatBubbleOutlineOutlinedIcon>
-          <RepeatOutlinedIcon></RepeatOutlinedIcon>
-          <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
-          <PublishIcon></PublishIcon>
+          <span className="comment">
+            <ChatBubbleOutlineOutlinedIcon className="comment__icon"></ChatBubbleOutlineOutlinedIcon>
+            <span className="comment__text">65</span>
+          </span>
+          <span className="retweet">
+            <RepeatOutlinedIcon className="retweet__icon"></RepeatOutlinedIcon>
+            <span className="retweet__text">1,200</span>
+          </span>
+          <span className="like">
+            <FavoriteBorderOutlinedIcon className="like__icon"></FavoriteBorderOutlinedIcon>
+            <span className="like__text">3,000</span>
+          </span>
+          <span className="dowland">
+            <PublishIcon className="dowland__icon"></PublishIcon>
+            <span className="dowland__text">40</span>
+          </span>
         </div>
       </div>
 

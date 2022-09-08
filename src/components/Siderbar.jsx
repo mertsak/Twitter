@@ -51,7 +51,7 @@ const Siderbar = () => {
 
       <div className="sidebar__user__con">
         <div className="sidebar__user">
-          <Avatar></Avatar>
+          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />
           <div>
             <p className="user__name">Mert Sakınç</p>
             <p className="user__username">@mrtsknc</p>

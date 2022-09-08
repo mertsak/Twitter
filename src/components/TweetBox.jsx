@@ -9,7 +9,7 @@ import SentimentSatisfiedAltOutlinedIcon from "@mui/icons-material/SentimentSati
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 import db from "../firebase";
 
@@ -27,6 +27,7 @@ const TweetBox = () => {
       text: text,
       selectedImage: selectedImage,
       avatar: "/static/images/avatar/2.jpg",
+      createdAt: serverTimestamp(),
     });
 
     console.log("Document written with ID: ", docPosts.id);
@@ -67,7 +68,10 @@ const TweetBox = () => {
             <CalendarTodayOutlinedIcon></CalendarTodayOutlinedIcon>
             <PlaceOutlinedIcon></PlaceOutlinedIcon>
           </div>
-          <Button className="tweet__btn" variant="outlined">
+          <Button
+            className={`tweet__btn ${text.length > 0 ? "active" : ""}`}
+            variant="outlined"
+          >
             Tweetle
           </Button>
         </div>

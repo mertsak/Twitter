@@ -16,7 +16,9 @@ const Widgets = () => {
         <TwitterTimelineEmbed
           sourceType="profile"
           screenName="mrtsknc"
-          options={{ height: 350 }}
+          options={
+            document.body.offsetHeight > 550 ? { height: 375 } : { height: 500 }
+          }
         />
       </div>
     </div>

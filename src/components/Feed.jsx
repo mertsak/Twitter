@@ -8,7 +8,7 @@ import db from "../firebase";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchPost } from "../redux/PostsSlice.js";
 
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 const Feed = () => {
   const dispatch = useDispatch();
@@ -24,14 +24,10 @@ const Feed = () => {
   };
 
   useEffect(() => {
-    fetchPosts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [posts]);
-
-  const fetchPosts = () => {
     const getPosts = collection(db, "posts");
+    const q = query(getPosts, orderBy("createdAt", "desc"));
 
-    getDocs(getPosts)
+    getDocs(q)
       .then((response) => {
         dispatch(
           fetchPost(
@@ -45,7 +41,7 @@ const Feed = () => {
       .catch((err) => {
         console.log(err.message);
       });
-  };
+  }, [dispatch, posts]);
 
   return (
     <div onScroll={handleScroll} className="feed">

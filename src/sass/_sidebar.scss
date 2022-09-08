@@ -62,23 +62,30 @@
   }
 
   &__user {
-    padding: 0 .8rem;
+    padding: 0.5rem 0.8rem;
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
+    border-radius: 2rem;
     align-items: center;
     gap: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: #e7e7e8;
+    }
 
     .user__name {
       font-weight: bold;
     }
     .user__username {
       font-weight: 300;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 
-  .sidebar__user__con{
+  .sidebar__user__con {
     position: fixed;
     bottom: 20px;
   }
@@ -106,7 +113,7 @@
     }
   }
 
-  .sidebar__user__con{
+  .sidebar__user__con {
     display: none;
   }
 }

@@ -5,4 +5,8 @@ export const store = configureStore({
   reducer: {
     posts: postsSlice,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
