@@ -1,4 +1,4 @@
-# <img src="./src/assets/logo.svg" width="50" height="25"> Twitter App with React
+# <img src="./src/assets/logo.svg" width="100" height="25"> Twitter App with React
 
 ## Project Features
 
